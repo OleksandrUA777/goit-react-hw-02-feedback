@@ -23,7 +23,7 @@ export class App extends Component {
     const result = Math.round(100 * (this.state.good / total)) + '%';
     return result;
   };
-  goodBtnClickHandler = event => {
+  btnClickHandler = event => {
     //prevState = {good: 0}
     //name = good
 
@@ -46,7 +46,7 @@ export class App extends Component {
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
-            onLeaveFeedback={this.goodBtnClickHandler}
+            onLeaveFeedback={this.btnClickHandler}
           />
         </Section>
         {this.countTotalFeedback() > 0 ? (
